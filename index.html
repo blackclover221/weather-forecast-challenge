@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <!-- Include Bootstrap CSS for styling (CDN) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="style.css" href="styles.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1>Weather Dashboard</h1>
+    <form id="search-form">
+      <div class="form-group">
+        <input type="text" class="form-control" id="city-input" placeholder="Enter city">
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <!-- Add buttons for each city -->
+    <div class="btn-group mt-3" role="group" aria-label="Cities">
+      <button type="button" class="btn btn-secondary" id="city-dubai">Dubai</button>
+      <button type="button" class="btn btn-secondary" id="city-london">London</button>
+      <button type="button" class="btn btn-secondary" id="city-new-york">New York</button>
+      <button type="button" class="btn btn-secondary" id="city-bali">Bali</button>
+      <button type="button" class="btn btn-secondary" id="city-berlin">Berlin</button>
+    </div>
+  </div>
+
+
+  <!-- Include Bootstrap and your custom JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
