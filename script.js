@@ -8,13 +8,13 @@ const searchForm = document.getElementById('search-form');
 const weatherInfo = document.getElementById('weather-info');
 const searchHistory = document.getElementById('search-history');
 
-// Event listener for search form
+
 searchForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const city = cityInput.value;
     if (city.trim() === '') return;
 
-    // Get the 5-day forecast for the searched city
+
     const forecastData = await get5DayForecast(city);
     if (forecastData) {
         displayCity5DayForecast(city, forecastData);
@@ -23,7 +23,6 @@ searchForm.addEventListener('submit', async (e) => {
     }
 });
 
-// Function to fetch 5-day forecast data for a specific city
 async function get5DayForecast(city) {
     try {
         const response = await fetch(`${apiUrl}/forecast?q=${city}&appid=${apiKey}`);
@@ -34,7 +33,7 @@ async function get5DayForecast(city) {
     }
 }
 
-// Function to display the 5-day forecast for a specific city
+
 function displayCity5DayForecast(city, forecastData) {
     if (forecastData === null) {
         weatherInfo.innerHTML = 'City not found.';
@@ -61,7 +60,6 @@ function displayCity5DayForecast(city, forecastData) {
     weatherInfo.innerHTML = forecastHtml;
 }
 
-// Function to add searched city to history
 function addCityToHistory(city) {
     const listItem = document.createElement('li');
     listItem.textContent = city;
