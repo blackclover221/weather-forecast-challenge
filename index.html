@@ -7,7 +7,7 @@
   <title>Weather Dashboard</title>
   <!-- Include Bootstrap CSS for styling (CDN) -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" type="style.css" href="styles.css">
+  <link rel="stylesheet" href="style.css"> <!-- Corrected the link to styles.css -->
 </head>
 
 <body>
@@ -19,16 +19,10 @@
       </div>
       <button type="submit" class="btn btn-primary">Search</button>
     </form>
-    <!-- Add buttons for each city -->
-    <div class="btn-group mt-3" role="group" aria-label="Cities">
-      <button type="button" class="btn btn-secondary" id="city-dubai">Dubai</button>
-      <button type="button" class="btn btn-secondary" id="city-london">London</button>
-      <button type="button" class="btn btn-secondary" id="city-new-york">New York</button>
-      <button type="button" class="btn btn-secondary" id="city-bali">Bali</button>
-      <button type="button" class="btn btn-secondary" id="city-berlin">Berlin</button>
-    </div>
-  </div>
 
+    <!-- Container for displaying weather information -->
+    <div id="weather-info" class="mt-3"></div>
+  </div>
 
   <!-- Include Bootstrap and your custom JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
